@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Ritinpaul/openfoodfacts-explorer/compare/v1.0.0...v1.0.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* Update public environment import and refine user role display in settings ([0646952](https://github.com/Ritinpaul/openfoodfacts-explorer/commit/064695263da6977d56d7c795f6637a9e6d2f40b7))
+
 ## 1.0.0 (2026-02-08)
 
 
