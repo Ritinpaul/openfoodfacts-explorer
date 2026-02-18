@@ -77,7 +77,9 @@ export const load: PageLoad = async ({ params, fetch }) => {
 
 	const { data: state, error: apiErrorWrapped } = await productsApi.getProductV3(params.barcode, {
 		product_type: 'all',
-		fields: ['all', 'knowledge_panels']
+		fields: ['all', 'knowledge_panels'],
+		// @ts-expect-error - This is a temporary workaround until the SDK supports this parameter.
+		knowledge_panels_client: 'web'
 	});
 
 	handleProductApiError(apiErrorWrapped);
@@ -109,8 +111,6 @@ export const load: PageLoad = async ({ params, fetch }) => {
 		? getPricesCoords(pricesApi, params.barcode)
 		: Promise.resolve(null);
 
-	const productAttributes = await productsApi.getProductAttributes(params.barcode);
-
 	const defaultPreferences = (async () => {
 		const { data: attributeGroups } = await productsApi.getAttributeGroups();
 		// FIXME: Remove cast when SDK fixes ids type being string | undefined
@@ -120,7 +120,6 @@ export const load: PageLoad = async ({ params, fetch }) => {
 
 	return {
 		state,
-		productAttributes: productAttributes,
 		defaultProductPreferences: await defaultPreferences,
 		tags: await folksonomyTags,
 		keys: await folksonomyKeys,
