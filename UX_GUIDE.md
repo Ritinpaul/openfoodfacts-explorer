@@ -2,6 +2,8 @@
 
 This document outlines the UI/UX patterns, design system conventions, and best practices used in this project. Following these guidelines helps keep our interface consistent, accessible, and easy to maintain.
 
+> **Disclaimer:** These are guidelines, not hard rules. Maintainers may request additional design changes or tweaks on a case-by-case basis during PR review.
+
 ---
 
 ## Table of Contents
@@ -46,8 +48,6 @@ The project uses generous rounding for a soft, friendly feel:
 
 - **Selectors & Fields:** `1rem` (set via `--radius-selector` and `--radius-field`)
 - **Inner Boxes:** `0.5rem` (set via `--radius-box`)
-
----
 
 ## 2. Component Patterns
 
@@ -146,8 +146,6 @@ For tag-like links (e.g., in the Footer's "Discover our Project" section), use `
 </a>
 ```
 
----
-
 ## 3. Internationalization (i18n)
 
 We use [`svelte-i18n`](https://github.com/kaisermann/svelte-i18n) to support multiple languages.
@@ -191,8 +189,6 @@ Translation files are located in `src/lib/i18n/messages/`. The project aims to c
    - (Optional) Add translations to other locale files (e.g., `it-IT.json`).
    - Use the key in your component with a `{ default: '...' }` fallback.
 
----
-
 ## 4. Accessibility (a11y)
 
 We aim to make Open Food Facts accessible to everyone. Before submitting a PR, review the checklist below.
@@ -232,8 +228,6 @@ We aim to make Open Food Facts accessible to everyone. Before submitting a PR, r
 />
 ```
 
----
-
 ## 5. Responsive Design
 
 We use a **Mobile-First** approach. Design for small screens first, then progressively enhance for larger viewports.
@@ -260,8 +254,6 @@ DaisyUI / Tailwind CSS breakpoints used in this project:
 | Responsive padding   | `px-4 md:px-10 lg:px-36` | Padding increases with screen size (see Footer)  |
 | Mobile-only full     | `max-sm:w-full`          | Full width only on very small screens            |
 
----
-
 ## 6. Design Resources
 
 ### Internal
@@ -274,7 +266,5 @@ DaisyUI / Tailwind CSS breakpoints used in this project:
 - **Figma:**
   - [Explorer Mockups (WIP)](<https://www.figma.com/design/pgWZAEX1ZoTt0f7Azek4AV/Open-Food-Facts-Explorer-(next-gen-frontend)?node-id=1-53>) — Homepage, Search, Product page, Edit mode, Facets.
   - [Current Website Design](https://www.figma.com/design/Qg9URUyrjHgYmnDHXRsTTB/Current-Website-design?m=auto&t=RokuCr1uXrGFMhTB-6) — Reference designs for the legacy website.
-
----
 
 _This guide is a living document. If you spot something missing or outdated, feel free to open a PR to improve it._
