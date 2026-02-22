@@ -40,16 +40,6 @@ We define custom **Light** and **Dark** themes in [`src/app.css`](src/app.css). 
 
 > **Note:** Always use DaisyUI semantic tokens (`bg-primary`, `text-base-content`) instead of hard-coded hex values. This ensures automatic dark mode support.
 
-### Typography
-
-We use **Plus Jakarta Sans** (Variable weight). It is set as the default sans-serif font via `@theme` in `app.css`:
-
-```css
-@theme {
-	--font-sans: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
-}
-```
-
 ### Border Radius
 
 The project uses generous rounding for a soft, friendly feel:
@@ -170,14 +160,7 @@ We use [`svelte-i18n`](https://github.com/kaisermann/svelte-i18n) to support mul
 </script>
 ```
 
-### Supported Locales
-
-| Locale  | Language | Status          |
-| ------- | -------- | --------------- |
-| `en-US` | English  | Fallback / Full |
-| `it-IT` | Italian  | Partial         |
-
-Translation files are located in `src/lib/i18n/messages/`.
+Translation files are located in `src/lib/i18n/messages/`. The project aims to cover all languages available across the Open Food Facts ecosystem — if you'd like to contribute a translation, add a new locale file there.
 
 ### Best Practices
 
@@ -291,11 +274,6 @@ DaisyUI / Tailwind CSS breakpoints used in this project:
 - **Figma:**
   - [Explorer Mockups (WIP)](<https://www.figma.com/design/pgWZAEX1ZoTt0f7Azek4AV/Open-Food-Facts-Explorer-(next-gen-frontend)?node-id=1-53>) — Homepage, Search, Product page, Edit mode, Facets.
   - [Current Website Design](https://www.figma.com/design/Qg9URUyrjHgYmnDHXRsTTB/Current-Website-design?m=auto&t=RokuCr1uXrGFMhTB-6) — Reference designs for the legacy website.
-
-### Community
-
-- **Slack:** Join `#off-explorer` on [slack.openfoodfacts.org](https://slack.openfoodfacts.org) for design discussions.
-- **Forum:** [forum.openfoodfacts.org](https://forum.openfoodfacts.org/) for broader community conversations.
 
 ---
 
