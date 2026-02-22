@@ -193,17 +193,15 @@ Translation files are located in `src/lib/i18n/messages/`. The project aims to c
 
 We aim to make Open Food Facts accessible to everyone. Before submitting a PR, review the checklist below.
 
-### Checklist for Every PR
-
-- [ ] **Icon-only buttons** have an `aria-label` describing the action.
-- [ ] **Decorative icons** use `aria-hidden="true"` so screen readers skip them.
-- [ ] **Images** have a descriptive `alt` attribute (or `alt=""` if purely decorative).
-- [ ] **Semantic HTML** is used correctly:
+- **Icon-only buttons** have an `aria-label` describing the action.
+- **Decorative icons** use `aria-hidden="true"` so screen readers skip them.
+- **Images** have a descriptive `alt` attribute (or `alt=""` if purely decorative).
+- **Semantic HTML** is used correctly:
   - `<button>` for actions (submitting forms, toggling state, opening modals).
   - `<a>` for navigation (changing the URL, linking to external pages).
-- [ ] **Dynamic notifications** (Toasts) use `role="alert"` and `aria-live="polite"`.
-- [ ] **Interactive elements** are keyboard-accessible (focusable and operable via `Enter`/`Space`).
-- [ ] **External links** use `target="_blank"` with `rel="noopener"` for security.
+- **Dynamic notifications** (Toasts) use `role="alert"` and `aria-live="polite"`.
+- **Interactive elements** are keyboard-accessible (focusable and operable via `Enter`/`Space`).
+- **External links** use `target="_blank"` with `rel="noopener"` for security.
 
 ### Good Examples from the Codebase
 
