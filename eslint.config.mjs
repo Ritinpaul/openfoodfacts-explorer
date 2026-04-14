@@ -69,7 +69,14 @@ export default [
 			// - https://github.com/sveltejs/eslint-plugin-svelte/issues/1329
 			// - https://github.com/sveltejs/eslint-plugin-svelte/issues/1327
 			// - https://github.com/sveltejs/eslint-plugin-svelte/issues/1324
-			'svelte/no-navigation-without-resolve': 'off'
+			'svelte/no-navigation-without-resolve': 'off',
+			// Enforce Svelte compiler a11y warnings as ESLint errors (closes #671).
+			// svelte/valid-compile is not included in flat/recommended, so we enable it
+			// explicitly here. This enforces — among others — the following codes:
+			//   • a11y-autofocus               – prevents focus disruption for AT users
+			//   • a11y-mouse-events-have-key-events – ensures keyboard parity
+			//   • a11y-positive-tabindex        – prevents broken tab order (tabindex > 0)
+			'svelte/valid-compile': 'error'
 		}
 	}
 ];
